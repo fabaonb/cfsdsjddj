@@ -19,7 +19,12 @@ jobs:
      with:
       node-version: "18"
    - name: 删除旧文件
-     run: rm -f _worker.js
+     run: |
+      if [ -f "_worker.js" ]; then
+       rm -f _worker.js
+      else
+       echo "_worker.js 不存在，跳过删除"
+      fi
    - name: 提交
      run: |
       git config --global user.name "github-actions[bot]"
