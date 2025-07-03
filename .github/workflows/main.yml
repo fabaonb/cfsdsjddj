@@ -29,5 +29,5 @@ jobs:
    - name: 提交
      run: |
       git add _worker.js
-      git commit --allow-empty-message -m "[skip ci]" || true
+      git commit --allow-empty-message -m "" || true
       git push
