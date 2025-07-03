@@ -31,4 +31,4 @@ jobs:
      run: |
       git add _worker.js
       git commit --allow-empty-message -m "[skip ci]" || true
-      git push
+      git push origin main --force
