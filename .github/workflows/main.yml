@@ -23,9 +23,9 @@ jobs:
       git config --global user.name "github-actions[bot]"
       git config --global user.email "github-actions[bot]@users.noreply.github.com"
    - name: 删除旧文件
-     run: rm -rf _worker.js || true
+     run: rm -r _worker.js || true
    - name: 下载最新文件
-     run: curl -fl -o _worker.js https://github.com/bia-pain-bache/BPB-Worker-Panel/releases/latest/download/worker.js
+     run: curl -l -o _worker.js https://github.com/bia-pain-bache/BPB-Worker-Panel/releases/latest/download/worker.js
    - name: 提交
      run: |
       git add _worker.js
